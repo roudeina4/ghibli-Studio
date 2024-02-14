@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+    font-family: 'Rozha One', serif;
+}
+.container{
+    height: 90vh;
+    width:100vw;
+    position: relative;
+}
+
+#websiteName{
+    color: rgb(200, 238, 238);
+    padding-left: 3%;
+    padding-top: 40px;
+    text-shadow: 2px 2px 5cqmin rgba(20, 106, 35, 0.5);
+
+}
+#movieImage{
+   width: 100%;
+   position: absolute;
+   z-index: -10;
+   top:0;
+
+}
+.movieInfo{
+    background-color: #3d7fcbb5;
+    position: absolute;
+     top: 80%;
+    left: 10%;
+  display: flex;
+  flex-direction: column;
+  color: wheat;
+  width: 850px;
+  position: sticky;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.447); /* Shining box shadow */
+
+}
+.movieInfo p{
+    width: 700px;
+    font-family: 'Nanum Myeongjo', serif;
+}
+a{
+    text-decoration: none;
+}
+

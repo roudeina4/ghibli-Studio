@@ -1,0 +1,42 @@
+<!-- searchpage.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="searchedmovie.css">
+</head>
+<body>
+
+    <div class="container">
+
+    </div>
+    <script>
+        const cont = document.querySelector(".container")
+        const animeId = new URLSearchParams(window.location.search).get('id');
+        function searchedmovie(movie) {
+            const moviesearch = `
+            <a href="index.html"><h1 id="websiteName">Ghiblis Love Language</h1></a>
+                <img id="movieImage" src="${movie.movie_banner}" > 
+                <div class="movieInfo">
+                    <h1 id="movieName">${movie.title}</h1>
+                    <h1 id="movieName">${movie.original_title}</h1>
+                <p id="movieInfo">${movie.description}</p>
+                </div>
+             
+               
+            `;
+            cont.innerHTML = moviesearch;
+        }
+
+        
+        fetch(`https://ghibliapi.vercel.app/films/${animeId}`)
+            .then(response => response.json())
+            .then(response => searchedmovie(response))
+            .catch(error => console.error('Error fetching movie details:', error));
+    </script>
+
+</body>
+</html>

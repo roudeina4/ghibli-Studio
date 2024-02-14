@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+    font-family: 'Rozha One', serif;
+}
+.maincontainer{
+    height: 100vh;
+    width:100vw;
+    position: relative;
+}
+
+.TranspirantNav h1{
+    color: azure;
+    padding-left: 3%;
+    padding-top: 40px;
+    text-shadow: 2px 2px 5cqmin rgba(20, 106, 35, 0.5);
+
+}
+.frontimage{
+    position: absolute;
+    top:0;
+    z-index:-1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    background-color: yellowgreen;
+
+}
+
+
+.frontimage .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, #8ab2ca, #8ab1ca3d,#ffffff00);
+    transform: translateY(67%);
+    z-index: 3;
+}
+
+#front{
+width: 100%;
+height:100%;
+object-fit: cover;
+}
+.theMoodcheck{
+    max-width: 30%;
+    height: 10%;
+    position: absolute;
+    top: 50%;
+    left: 12%;
+}
+#theMood,#randomly{
+    cursor: pointer;
+    width: 400px;
+    height: 80px;
+    color:rgba(248, 241, 208, 0.996);
+    border: none;
+    border-radius: 50px;
+    font-family:'Rozha One' ;
+    font-size:1.8rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    background-color:  #dd4a4ac6;
+}
+#mood{
+    width: 450px;
+    height: 80px;
+    border-radius: 50px;
+    text-align: center;
+    border: none;
+    font-family:'Rozha One' ;
+visibility: hidden;
+margin-bottom: 20px;
+    background-color: rgba(204, 216, 159, 0.252);
+}
+.secondcontainer
+{    
+    width:100vw;
+    background-color: #8ab2ca;
+}
+
+
+.movieList .cards{
+    width:100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap:30px ;
+    row-gap: 50px;
+    padding-top: 50px;
+    
+
+}
+.card {
+    width: 400px; 
+    height: 600px;
+    border-radius: 20px; 
+    background-color: cadetblue;
+    overflow: hidden;
+    margin: 0;  /* Add this line to remove default margin */
+    padding: 0; /* Add this line to remove default padding */
+    display: flex; /* Add this line */
+    position: relative;
+    flex-direction: column; /* Add this line */
+}
+.card:hover{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 90%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: all 1s;
+    overflow: hidden;
+    margin: 0;  /* Add this line to remove default margin */
+    padding: 0; /* Add this line to remove default padding */
+}
+.card  img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+  
+  }
+  .card .animeTitle {
+    height: 17%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Rozha One';
+    color: #f2d9b8;
+    background-color:#469685;
+    z-index: 2;
+    margin: 0;  
+    text-align: center;
+    padding-top: 10px;
+    position:absolute;
+    top: 89%;
+    width: 100%;
+    font-weight: 400;
+
+}
+
+a{
+    text-decoration: none;
+
+}
+
+.secondcontainer .movieList #theTitleoftheseconddiv{
+    text-align: center;
+    font-size: 2.1rem;
+    padding-top: 10%;
+    letter-spacing: 0.3em;
+    font-weight: 400;
+    color: #f2d9b8;
+}
